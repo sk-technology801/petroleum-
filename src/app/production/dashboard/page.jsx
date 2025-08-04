@@ -494,47 +494,7 @@ export default function ProductionDashboard() {
   return (
     <div className={`min-h-screen transition-colors duration-300 ${darkMode ? 'bg-gray-900 text-gray-100' : 'bg-gray-50 text-gray-900'}`}>
       {/* Navigation */}
-      <nav className={`sticky top-0 z-40 shadow-sm transition-colors duration-300 ${darkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
-        <div className="container mx-auto px-4">
-          <div className="flex overflow-x-auto">
-            <button
-              onClick={() => setSelectedTab('overview')}
-              className={`px-4 py-3 text-sm font-medium whitespace-nowrap border-b-2 transition-colors duration-300 ${selectedTab === 'overview' ? (darkMode ? 'border-blue-500 text-blue-400' : 'border-blue-600 text-blue-700') : (darkMode ? 'border-transparent text-gray-300 hover:text-gray-200' : 'border-transparent text-gray-600 hover:text-gray-900')}`}
-            >
-              <FiHome className="inline mr-2" /> Overview
-            </button>
-            <button
-              onClick={() => setSelectedTab('wells')}
-              className={`px-4 py-3 text-sm font-medium whitespace-nowrap border-b-2 transition-colors duration-300 ${selectedTab === 'wells' ? (darkMode ? 'border-blue-500 text-blue-400' : 'border-blue-600 text-blue-700') : (darkMode ? 'border-transparent text-gray-300 hover:text-gray-200' : 'border-transparent text-gray-600 hover:text-gray-900')}`}
-            >
-              <FiDroplet className="inline mr-2" /> Wells
-            </button>
-            <button
-              onClick={() => setSelectedTab('equipment')}
-              className={`px-4 py-3 text-sm font-medium whitespace-nowrap border-b-2 transition-colors duration-300 ${selectedTab === 'equipment' ? (darkMode ? 'border-blue-500 text-blue-400' : 'border-blue-600 text-blue-700') : (darkMode ? 'border-transparent text-gray-300 hover:text-gray-200' : 'border-transparent text-gray-600 hover:text-gray-900')}`}
-            >
-              <FiHardDrive className="inline mr-2" /> Equipment
-            </button>
-            <button
-              onClick={() => setSelectedTab('analytics')}
-              className={`px-4 py-3 text-sm font-medium whitespace-nowrap border-b-2 transition-colors duration-300 ${selectedTab === 'analytics' ? (darkMode ? 'border-blue-500 text-blue-400' : 'border-blue-600 text-blue-700') : (darkMode ? 'border-transparent text-gray-300 hover:text-gray-200' : 'border-transparent text-gray-600 hover:text-gray-900')}`}
-            >
-              <FiTrendingUp className="inline mr-2" /> Analytics
-            </button>
-            <button
-              onClick={() => setSelectedTab('alerts')}
-              className={`px-4 py-3 text-sm font-medium whitespace-nowrap border-b-2 transition-colors duration-300 relative ${selectedTab === 'alerts' ? (darkMode ? 'border-blue-500 text-blue-400' : 'border-blue-600 text-blue-700') : (darkMode ? 'border-transparent text-gray-300 hover:text-gray-200' : 'border-transparent text-gray-600 hover:text-gray-900')}`}
-            >
-              <FiAlertTriangle className="inline mr-2" /> Alerts
-              {criticalAlerts > 0 && (
-                <span className="absolute top-1 right-1 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">
-                  {criticalAlerts}
-                </span>
-              )}
-            </button>
-          </div>
-        </div>
-      </nav>
+     
 
       {/* Status Bar */}
       <div className={`py-2 px-4 transition-colors duration-300 ${darkMode ? 'bg-gray-800' : 'bg-gray-200'}`}>
